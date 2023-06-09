@@ -1,0 +1,2 @@
+# ALL_YOUR_BUGS_ARE_BELONG_TO_US
+USCC Cyber Camp CTF Team 6 homepage
