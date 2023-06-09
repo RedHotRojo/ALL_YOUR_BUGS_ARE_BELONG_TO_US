@@ -22,6 +22,11 @@
       img {
         transition: opacity 2s;
       }
+      #desc {
+        transition: opacity 4s;
+        opacity: 0;
+        font-size: 20px;
+      }
     </style>
   </head>
   <body>
@@ -35,6 +40,9 @@
       <span>US</span>
     </p>
     <img src="hackerlogo.png" alt="hacker logo">
+    <p id=desc>
+      The best 2023 USCC Cyber Camp CTF team
+    </p>
     <script>
       (() => {
         setTimeout(() => {
@@ -46,6 +54,9 @@
                 spans[i].style.opacity = 1;
               }, 1000 * i)
             }
+            setTimeout(() => {
+              document.querySelector("#desc").style.opacity = 1;
+            }, 9000);
           }, 3000);
         }, 1000);
       })();
