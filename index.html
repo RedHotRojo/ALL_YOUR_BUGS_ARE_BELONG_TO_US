@@ -22,7 +22,7 @@
       img {
         transition: opacity 2s;
       }
-      #desc {
+      #desc, #final {
         transition: opacity 4s;
         opacity: 0;
         font-size: 20px;
@@ -43,6 +43,9 @@
     <p id=desc>
       The best 2023 USCC Cyber Camp CTF team
     </p>
+    <p id=final>
+     Finished 12th place with 940 points
+    </p>
     <script>
       (() => {
         setTimeout(() => {
@@ -56,6 +59,9 @@
             }
             setTimeout(() => {
               document.querySelector("#desc").style.opacity = 1;
+              setTimeout(() => {
+                document.querySelector("#final").style.opacity = 1;
+              }, 5000);
             }, 9000);
           }, 3000);
         }, 1000);
