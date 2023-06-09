@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Idea Dumper</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/ico" href="/favicon.ico"/>
+    <meta name="description" content="The place to dump your craziest ideas, even if it's impossible">
+    <style>
+      body {
+        background: black;
+        color: white;
+        font-family: Consolas, serif;
+        text-align: center;
+        font-size: 40px;
+      }
+      p {
+        margin: 80px;
+      }
+      span, img {
+        opacity: 0;
+      }
+      img {
+        transition: opacity 2s;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <span>ALL</span>
+      <span>YOUR</span>
+      <span>BUGS</span>
+      <span>ARE</span>
+      <span>BELONG</span>
+      <span>TO</span>
+      <span>US</span>
+    </p>
+    <img src="hackerlogo.png" alt="hacker logo">
+    <script>
+      (() => {
+        setTimeout(() => {
+          document.querySelector("img").style.opacity = 1;
+          setTimeout(() => {
+            let spans = document.querySelectorAll("span");
+            for (let i = 0; i < spans.length; i++) {
+              setTimeout(() => {
+                spans[i].style.opacity = 1;
+              }, 1000 * i)
+            }
+          }, 3000);
+        }, 1000);
+      })();
+    </script>
+  </body>
+</html>
